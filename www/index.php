@@ -37,7 +37,7 @@ require_once "koneksi.php";
                                 </thead>
                                 <tbody>
                                     <?php
-                                    $query = mysqli_query($db, 'select * from tbl_mst_barang');
+                                    $query = mysqli_query($koneksi, 'select * from tbl_mst_barang');
                                     while ($data = mysqli_fetch_array($query)) {
                                     ?>
                                         <tr>
@@ -77,7 +77,7 @@ require_once "koneksi.php";
                                 $harga = $_POST['harga'];
 
                                 $input = "insert into tbl_mst_barang VALUES ('','$kode_barang','$nama_barang','$jumlah', '$harga')";
-                                $query = mysqli_query($db, $input);
+                                $query = mysqli_query($koneksi, $input);
                                 echo "<script>alert('Data Berhasil di Tambahkan!')</script>";
                                 echo "<meta http-equiv='refresh' content='1' />";
                             }

@@ -2,7 +2,7 @@
 require_once("koneksi.php");
 $id = $_GET['barang_id'];
 $query = "SELECT * FROM tbl_mst_barang WHERE barang_id = $id";
-$result = mysqli_query($db, $query);
+$result = mysqli_query($koneksi, $query);
 $row = mysqli_fetch_assoc($result);
 ?>
 <!doctype html>

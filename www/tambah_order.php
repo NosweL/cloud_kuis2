@@ -2,7 +2,7 @@
 require_once("koneksi.php");
 if (isset($_POST['submit'])) {
     $noInvoice = $_POST['no_invoice'];
-    $result = mysqli_query($db, "select * from tbl_trx_order where no_invoice='$noInvoice'");
+    $result = mysqli_query($koneksi, "select * from tbl_trx_order where no_invoice='$noInvoice'");
     $data = mysqli_fetch_array($result);
     $user_id = $_POST['user_id'];
     $barang_id = $_POST['barang_id'];
@@ -14,7 +14,7 @@ if (isset($_POST['submit'])) {
         echo "<script>alert('Data Invoice Sama. Gagal disimpan')</script>";
     } else {
         $input    = "INSERT INTO tbl_trx_order VALUES ('','$user_id','$barang_id','$no_invoice','$jumlah_pesanan', '$harga_satuan','$total_harga')";
-        $query_input = mysqli_query($db, $input);
+        $query_input = mysqli_query($koneksi, $input);
         echo "<script>alert('Data Berhasil Di Tambahkan')</script>";
         header("Location: master_order.php");
     }
@@ -48,7 +48,7 @@ if (isset($_POST['submit'])) {
                                             <option selected>Pilih User</option>
                                             <?php
                                             include "koneksi.php";
-                                            $query = mysqli_query($db, "SELECT * FROM tbl_mst_user") or die(mysqli_error($db));
+                                            $query = mysqli_query($koneksi, "SELECT * FROM tbl_mst_user") or die(mysqli_error($koneksi));
 
                                             while ($data = mysqli_fetch_array($query)) { ?>
                                                 <option value="<?php echo $data['user_id'] ?>"><?php echo  $data['nama_anggota'] ?> </option>
@@ -64,7 +64,7 @@ if (isset($_POST['submit'])) {
                                             <option selected>Masukkan Kode Barang</option>
                                             <?php
                                             include "koneksi.php";
-                                            $query = mysqli_query($db, "SELECT * FROM tbl_mst_barang") or die(mysqli_error($db));
+                                            $query = mysqli_query($koneksi, "SELECT * FROM tbl_mst_barang") or die(mysqli_error($koneksi));
 
                                             while ($data = mysqli_fetch_array($query)) { ?>
                                                 <option value="<?php echo $data['barang_id'] ?>"><?php echo  $data['kode_barang'] ?> </option>

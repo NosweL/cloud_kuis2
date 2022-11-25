@@ -17,11 +17,11 @@ if (isset($_POST['submit'])) {
 
 if ($password) {
     $sql = "SELECT * FROM tbl_mst_user WHERE nama_anggota='$nama_anggota'";
-    $result = mysqli_query($db, $sql);
+    $result = mysqli_query($koneksi, $sql);
     if (!$result->num_rows > 0) {
         $sql = "INSERT INTO tbl_mst_user VALUES ('','$nama_anggota', '$user_name_login', '$password')";
         // $sql = "INSERT INTO tbl_mst_user VALUES ('$user_id', '$nama_anggota', '$user_name_login', '$password')";
-        $result = mysqli_query($db, $sql);
+        $result = mysqli_query($koneksi, $sql);
         if ($result) {
             // $user_id = "";
             $nama_anggota = "";

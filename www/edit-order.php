@@ -2,7 +2,7 @@
 require_once("koneksi.php");
 $id = $_GET['order_id'];
 $query = "SELECT * FROM tbl_trx_order WHERE order_id = $id";
-$result = mysqli_query($db, $query);
+$result = mysqli_query($koneksi, $query);
 $row = mysqli_fetch_assoc($result);
 ?>
 <!doctype html>
@@ -35,7 +35,7 @@ $row = mysqli_fetch_assoc($result);
                                             <option selected><?= $row['user_id'] ?></option>
                                             <?php
                                             include "koneksi.php";
-                                            $query = mysqli_query($db, "SELECT * FROM tbl_mst_user") or die(mysqli_error($db));
+                                            $query = mysqli_query($koneksi, "SELECT * FROM tbl_mst_user") or die(mysqli_error($koneksi));
                                             while ($data = mysqli_fetch_array($query)) { ?>
                                                 <option value="<?php echo $data['user_id'] ?>"><?php echo  $data['user_id'] ?> </option>
                                             <?php }
@@ -50,7 +50,7 @@ $row = mysqli_fetch_assoc($result);
                                             <option selected><?= $row['barang_id'] ?></option>
                                             <?php
                                             include "koneksi.php";
-                                            $query = mysqli_query($db, "SELECT * FROM tbl_mst_barang") or die(mysqli_error($db));
+                                            $query = mysqli_query($koneksi, "SELECT * FROM tbl_mst_barang") or die(mysqli_error($koneksi));
 
                                             while ($data = mysqli_fetch_array($query)) { ?>
                                                 <option value="<?php echo $data['barang_id'] ?>"><?php echo  $data['barang_id'] ?> </option>

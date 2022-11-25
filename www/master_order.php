@@ -37,7 +37,7 @@ require_once "koneksi.php";
                                 </thead>
                                 <tbody>
                                     <?php
-                                    $result = mysqli_query($db, "SELECT * FROM tbl_trx_order");
+                                    $result = mysqli_query($koneksi, "SELECT * FROM tbl_trx_order");
                                     while ($data = mysqli_fetch_array($result)) {
                                     ?>
                                         <tr>
