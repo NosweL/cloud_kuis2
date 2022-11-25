@@ -147,14 +147,14 @@ ALTER TABLE `tbl_trx_order`
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
-
+--
 --
 -- Ketidakleluasaan untuk tabel `tbl_trx_order`
 --
-ALTER TABLE `tbl_trx_order`
-  ADD CONSTRAINT `fk_tbl_trx_order_1` FOREIGN KEY (`user_id`) REFERENCES `tbl_mst_user` (`user_id`),
-  ADD CONSTRAINT `fk_tbl_trx_order_2` FOREIGN KEY (`barang_id`) REFERENCES `tbl_mst_barang` (`barang_id`);
-COMMIT;
+--ALTER TABLE `tbl_trx_order`
+--ADD CONSTRAINT `fk_tbl_trx_order_1` FOREIGN KEY (`user_id`) REFERENCES `tbl_mst_user` (`user_id`),
+--ADD CONSTRAINT `fk_tbl_trx_order_2` FOREIGN KEY (`barang_id`) REFERENCES `tbl_mst_barang` (`barang_id`);
+--COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
