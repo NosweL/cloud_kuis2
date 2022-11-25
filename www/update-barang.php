@@ -10,7 +10,7 @@ if (isset($_POST['update'])) {
     $result = mysqli_query($db, $input);
     if ($result) {
         echo "<script>alert('Data Berhasil di Update!')</script>";
-        header("Location: master_barang.php");
+        header("Location: index.php");
     } else {
         echo "<script>alert('Data Gagal di Update!')</script>";
     }

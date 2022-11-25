@@ -55,7 +55,7 @@ $row = mysqli_fetch_assoc($result);
                             <input type="hidden" value="<?= $row['barang_id'] ?>" name="barang_id">
                     </div>
                     <div class="modal-footer">
-                        <a href="master_barang.php" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</a>
+                        <a href="index.php" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</a>
                         <button type="submit" name="update" value="Update" class="btn btn-primary">Simpan</button>
                     </div>
                     </form>

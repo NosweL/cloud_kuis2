@@ -9,7 +9,7 @@ require_once "koneksi.php";
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Hello, world!</title>
+    <title>Simple CRUD</title>
 </head>
 
 <body>
@@ -82,7 +82,7 @@ require_once "koneksi.php";
                                 echo "<meta http-equiv='refresh' content='1' />";
                             }
                             ?>
-                            <form action="master_barang.php" method="post" class="needs-validation" novalidate>
+                            <form action="index.php" method="post" class="needs-validation" novalidate>
                                 <div class="row">
                                     <div class="col">
                                         <label class="form-label">Kode Barang
