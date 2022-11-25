@@ -8,6 +8,7 @@
 -- Versi PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -38,13 +39,7 @@ CREATE TABLE `tbl_mst_barang` (
 --
 -- Dumping data untuk tabel `tbl_mst_barang`
 --
-
-INSERT INTO `tbl_mst_barang` (`barang_id`, `kode_barang`, `nama_barang`, `jumlah`, `harga`) VALUES
-(10, 'QA0001', 'Kabel USB', '2', '15000'),
-(12, 'QA0002', 'Sabun', '15', '15000');
-
 -- --------------------------------------------------------
-
 --
 -- Struktur dari tabel `tbl_mst_user`
 --
