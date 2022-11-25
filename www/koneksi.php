@@ -2,7 +2,7 @@
 $server = "db";
 $username = "root";
 $password = "welson";
-$nama_database = "db_simplecrud";
+$nama_database = "db_crud";
 $db = mysqli_connect($server, $username, $password, $nama_database);
 // echo "berhasil terkoneksi..... ";
 if (mysqli_connect_errno()) {
