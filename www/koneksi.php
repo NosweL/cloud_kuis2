@@ -1,6 +1,6 @@
 <?php
 $server = "db";
-$username = "root";
+$username = "welson";
 $pass = "welson";
 $db = "db_crud";
 $koneksi = mysqli_connect($server, $username, $pass, $db);
