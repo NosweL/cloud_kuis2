@@ -1,9 +1,9 @@
 <?php
 $server = "db";
-$username = "welson";
-$pass = "welson";
+$username = "root";
+$password = "";
 $db = "db_crud";
-$koneksi = mysqli_connect($server, $username, $pass, $db);
+$koneksi = mysqli_connect($server, $username, $password, $db);
 // echo "berhasil terkoneksi..... ";
 if (mysqli_connect_errno()) {
 	echo "Koneksi gagal : " . mysqli_connect_error();
